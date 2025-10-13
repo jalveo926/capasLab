@@ -14,26 +14,84 @@ namespace capasLab
         int cantEstacionamiento { get; set; }
         //Sirve para restar al inicio del programa lo que se ha usado antes
         int[] cuposEntrada = { 10, 20, 120 }; //Platino,VIP,General respectivamente
-        int cuposEstacionamiento=200; //200
+        int cuposEstacionamiento = 200; //200
 
-        Double monto,subtotal, total;
+        public double montoTipo { get; set; }
+        public double subtotal { get; set; }
+        public double subtotal2 { get; set; }
+        public double total { get; set; }
+        public double sub1SPAC { get; set; }
+        public double sub2ITBMS { get; set; }
+        public double montoEntrada { get; set; }
+        public double montoEstacionamiento { get; set; }
 
 
-        Evento(int cantEntrada,int cantEstacionamiento,int usadoEstacionamiento,int usadoPlatino,int usadoVIP,int usadoGeneral) { 
+        public Evento(String tipoEntrada,int cantEntrada,int cantEstacionamiento,int usadoEstacionamiento,int usadoPlatino,int usadoVIP,int usadoGeneral) { 
+            this.tipoEntrada = tipoEntrada;
             this.cantEntrada = cantEntrada;
             this.cantEstacionamiento = cantEstacionamiento;
-            monto = 0;
+            montoTipo = 0;
             subtotal = 0;
             total = 0;
 
             //Actualizo con lo que ya se ha utilizado anteriormente
-            cuposEstacionamiento -= usadoEstacionamiento + cantEstacionamiento; //Restamos lo que usamos en estacionamiento y lo pasado
+            CalcularEstacionamientosDisp(usadoEstacionamiento); //Restamos lo que usamos en estacionamiento actualmente y lo pasado
             RestarCuposEntrada(0, usadoPlatino);
             RestarCuposEntrada(1, usadoVIP);
             RestarCuposEntrada(2, usadoGeneral);
-            
+            //Luego de actualizar los cupos, procedemos a calcular todo lo que se necesita
+            DeterminarTipoEntrada();
 
         }
+       public void ProcesarDatos() {
+            CalcularEntradas();
+            CalcularEstacionamiento();
+            CalcularSubtotal();
+            CalcularSPAC();
+            CalcularSubtotal2();
+            CalcularITBMS();
+            CalcularTotal();
+        }
+          void CalcularEstacionamientosDisp(int usados) {
+            cuposEstacionamiento -= usados + cantEstacionamiento;
+        }
+
+        //Estos métodos se llaman desde otra clase para poder tener cada dato por separado por eso tantos procesos simples
+         void CalcularTotal() {
+            total = subtotal2 + sub2ITBMS;
+         
+        }
+         void CalcularSubtotal() {
+            subtotal = montoEntrada + montoEstacionamiento;
+           
+        }
+
+         void CalcularSubtotal2() {
+            subtotal2 = subtotal + sub1SPAC;
+            
+        }
+
+          void CalcularEntradas() {
+            
+            montoEntrada = montoTipo * cantEntrada;
+         
+        }
+
+
+         void CalcularEstacionamiento() {
+            montoEstacionamiento= cantEstacionamiento * 25;
+        }
+
+        void CalcularSPAC() {
+           sub1SPAC = montoEntrada * 0.05;
+          
+        }
+
+        void CalcularITBMS() {
+            sub2ITBMS = subtotal2 * 0.07;
+            
+        }
+
         void DeterminarTipoEntrada() {
 
             try
@@ -45,9 +103,9 @@ namespace capasLab
 
                 switch (tipoEntrada)
                 {
-                    case "Platino": monto += 150; RestarCuposEntrada(0); break;
-                    case "VIP": monto += 100; RestarCuposEntrada(1); break;
-                    case "General": monto += 50; RestarCuposEntrada(2); break;
+                    case "Platino": montoTipo += 150; RestarCuposEntrada(0); break;
+                    case "VIP": montoTipo += 100; RestarCuposEntrada(1); break;
+                    case "General": montoTipo += 50; RestarCuposEntrada(2); break;
                     default: MostrarAlerta("Elija una opción válida", "Advertencia"); break;
                 }
 
@@ -64,10 +122,10 @@ namespace capasLab
         }
 
         void RestarCuposEntrada(int indice) {
-            if (cuposEntrada[indice] >= 0)
+            if (cuposEntrada[indice] >= 0 && (cuposEntrada[indice]-cantEntrada >=0))
                 cuposEntrada[indice] -= cantEntrada;
             else {
-                MostrarAlerta("Se acabaron los cupos para este tipo de entrada,Disculpe las molestias","Error");
+                MostrarAlerta("Quedan "+ (cuposEntrada[indice] - cantEntrada) + " para este tipo de entrada,Disculpe las molestias","Error");
                 return;
             }
         }
@@ -77,11 +135,11 @@ namespace capasLab
         
         void RestarCuposEntrada(int indice,int cantRestar)
         {
-            if (cuposEntrada[indice] >= 0)
+            if (cuposEntrada[indice] >= 0 && (cuposEntrada[indice] - cantEntrada >= 0))
                 cuposEntrada[indice] -= cantRestar;
             else
             {
-                MostrarAlerta("Se acabaron los cupos para este tipo de entrada,Disculpe las molestias", "Error");
+                MostrarAlerta("Quedan " + (cuposEntrada[indice] - cantEntrada) + " para este tipo de entrada,Disculpe las molestias", "Error");
                 return;
             }
         }
@@ -90,17 +148,21 @@ namespace capasLab
             MessageBox.Show(mensaje,titulo,MessageBoxButtons.OK,MessageBoxIcon.Warning);
         }
 
-        int TraerCupoPlatino() {
+        public int TraerCupoPlatino() {
             return cuposEntrada[0];
         }
-        int TraerCupoVIP(){
+        public int TraerCupoVIP(){
             return cuposEntrada[1];
         }
-        int TraerCupoGeneral() {
+        public int TraerCupoGeneral() {
             return cuposEntrada[2];
         }
 
-       
-        
+        public int TraerCupoEstacionamiento() {
+            return cuposEstacionamiento;
+        }
+
+
+
     }
 }
