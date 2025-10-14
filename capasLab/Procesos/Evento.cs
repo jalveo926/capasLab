@@ -37,7 +37,7 @@ namespace capasLab
             total = 0;
 
             //Actualizo con lo que ya se ha utilizado anteriormente
-            this.usadoEstacionamiento = usadoEstacionamiento;
+            cuposEstacionamiento -= usadoEstacionamiento;
             RestarCuposEntrada(0, usadoPlatino);
             RestarCuposEntrada(1, usadoVIP);
             RestarCuposEntrada(2, usadoGeneral);
@@ -57,14 +57,17 @@ namespace capasLab
 
             //Luego de actualizar los cupos, procedemos a calcular todo lo que se necesita
             DeterminarTipoEntrada();
-            CalcularEstacionamientosDisp(usadoEstacionamiento); //Restamos lo que usamos en estacionamiento actualmente y lo pasado
+            CalcularEstacionamientosDisp(); //Restamos lo que usamos en estacionamiento actualmente y lo pasado
             CalcularSubtotal();
             CalcularSubtotal2();
             CalcularTotal();
         }
-        void CalcularEstacionamientosDisp(int usados)
+        void CalcularEstacionamientosDisp()
         {
-            cuposEstacionamiento -= usados + cantEstacionamiento;
+            if (cantEstacionamiento <= cuposEstacionamiento && cantEstacionamiento > 0)
+                cuposEstacionamiento -= cantEstacionamiento;
+            else if (cantEstacionamiento > cuposEstacionamiento)
+                MostrarAlerta("Ya no hay cupos de estacionamiento disponibles", "Error");
         }
 
 
