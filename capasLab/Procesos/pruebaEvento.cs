@@ -10,10 +10,14 @@ namespace capasLab.Procesos
     {
         public  void prueba()
         {
-            Evento evento = new Evento("VIP", 3, 2, 1, 1, 1, 1);
+            Evento evento = new Evento(1,1,1,1);
             
-            evento.ProcesarDatos();
+            evento.ProcesarDatos("VIP", 3,2);
             Console.WriteLine(evento.total);
+            Console.WriteLine(evento.TraerCupoEstacionamiento());
+            evento.ProcesarDatos("Platino", 10,1);
+            Console.WriteLine(evento.total);
+            Console.WriteLine(evento.TraerCupoEstacionamiento());
         }
             
            
