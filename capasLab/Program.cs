@@ -14,11 +14,10 @@ namespace capasLab
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
-            Procesos.pruebaEvento prueba = new Procesos.pruebaEvento();
-            prueba.prueba();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
+            
         }
     }
 }

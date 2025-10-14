@@ -15,7 +15,7 @@ namespace capasLab
         //Sirve para restar al inicio del programa lo que se ha usado antes
         int[] cuposEntrada = { 10, 20, 120 }; //Platino,VIP,General respectivamente
         string[] tipos = { "Platino", "VIP", "General" };
-        int cuposEstacionamiento = 200, usadoEstacionamiento;
+        int cuposEstacionamiento = 200;
 
         //Para imprimir en el formulario factura
         public double montoTipo { get; set; }
