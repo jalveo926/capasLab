@@ -136,7 +136,7 @@ namespace capasLab
             else
             {
                 MostrarAlerta($"No hay suficientes cupos para {tipos[indice]}.\n" +
-                              $"Disponibles: {cuposEntrada[indice]}", "Cupos agotados");
+                              $"Disponibles: {cuposEntrada[indice]}", "Cupos agotados"); 
 
                 throw new InvalidOperationException("Cupos agotados para este tipo de entrada.");
             }
