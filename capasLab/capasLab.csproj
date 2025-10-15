@@ -46,25 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FacturaForm.cs">
+    <Compile Include="Formularios\FacturaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FacturaForm.Designer.cs">
+    <Compile Include="Formularios\FacturaForm.Designer.cs">
       <DependentUpon>FacturaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="informacionForm.cs">
+    <Compile Include="Formularios\informacionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="informacionForm.Designer.cs">
+    <Compile Include="Formularios\informacionForm.Designer.cs">
       <DependentUpon>informacionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Procesos\Evento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FacturaForm.resx">
+    <EmbeddedResource Include="Formularios\FacturaForm.resx">
       <DependentUpon>FacturaForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="informacionForm.resx">
+    <EmbeddedResource Include="Formularios\informacionForm.resx">
       <DependentUpon>informacionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
