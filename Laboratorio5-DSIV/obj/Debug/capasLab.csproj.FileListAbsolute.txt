@@ -1,0 +1,35 @@
+C:\Users\benja\Downloads\Laboratorio5-DSIV\Laboratorio5-DSIV\bin\Debug\Laboratorio5-DSIV.exe.config
+C:\Users\benja\Downloads\Laboratorio5-DSIV\Laboratorio5-DSIV\bin\Debug\Laboratorio5-DSIV.exe
+C:\Users\benja\Downloads\Laboratorio5-DSIV\Laboratorio5-DSIV\bin\Debug\Laboratorio5-DSIV.pdb
+C:\Users\benja\Downloads\Laboratorio5-DSIV\Laboratorio5-DSIV\obj\Debug\capasLab.csproj.AssemblyReference.cache
+C:\Users\benja\Downloads\Laboratorio5-DSIV\Laboratorio5-DSIV\obj\Debug\Laboratorio5-DSIV.exe.config
+C:\Users\benja\Downloads\Laboratorio5-DSIV\Laboratorio5-DSIV\obj\Debug\Laboratorio5_DSIV.FormReserva.resources
+C:\Users\benja\Downloads\Laboratorio5-DSIV\Laboratorio5-DSIV\obj\Debug\Laboratorio5_DSIV.FormResumen.resources
+C:\Users\benja\Downloads\Laboratorio5-DSIV\Laboratorio5-DSIV\obj\Debug\Laboratorio5_DSIV.Properties.Resources.resources
+C:\Users\benja\Downloads\Laboratorio5-DSIV\Laboratorio5-DSIV\obj\Debug\capasLab.csproj.GenerateResource.cache
+C:\Users\benja\Downloads\Laboratorio5-DSIV\Laboratorio5-DSIV\obj\Debug\capasLab.csproj.CoreCompileInputs.cache
+C:\Users\benja\Downloads\Laboratorio5-DSIV\Laboratorio5-DSIV\obj\Debug\Laboratorio5-DSIV.exe
+C:\Users\benja\Downloads\Laboratorio5-DSIV\Laboratorio5-DSIV\obj\Debug\Laboratorio5-DSIV.pdb
+C:\Users\benja\Downloads\capasLab-main\Laboratorio5-DSIV\bin\Debug\capasLab.exe.config
+C:\Users\benja\Downloads\capasLab-main\Laboratorio5-DSIV\bin\Debug\capasLab.exe
+C:\Users\benja\Downloads\capasLab-main\Laboratorio5-DSIV\bin\Debug\capasLab.pdb
+C:\Users\benja\Downloads\capasLab-main\Laboratorio5-DSIV\obj\Debug\capasLab.csproj.AssemblyReference.cache
+C:\Users\benja\Downloads\capasLab-main\Laboratorio5-DSIV\obj\Debug\Laboratorio5_DSIV.FormReserva.resources
+C:\Users\benja\Downloads\capasLab-main\Laboratorio5-DSIV\obj\Debug\Laboratorio5_DSIV.FormResumen.resources
+C:\Users\benja\Downloads\capasLab-main\Laboratorio5-DSIV\obj\Debug\capasLab.Properties.Resources.resources
+C:\Users\benja\Downloads\capasLab-main\Laboratorio5-DSIV\obj\Debug\capasLab.csproj.GenerateResource.cache
+C:\Users\benja\Downloads\capasLab-main\Laboratorio5-DSIV\obj\Debug\capasLab.csproj.CoreCompileInputs.cache
+C:\Users\benja\Downloads\capasLab-main\Laboratorio5-DSIV\obj\Debug\capasLab.exe
+C:\Users\benja\Downloads\capasLab-main\Laboratorio5-DSIV\obj\Debug\capasLab.pdb
+C:\Users\Usuario\OneDrive\UNIVERSIDAD\UTP\SEMESTRES\2 AÑO\2 SEMESTRE\DS IV\Actividades\Laboratorios\Lab5\capasLab\Laboratorio5-DSIV\bin\Debug\capasLab.exe.config
+C:\Users\Usuario\OneDrive\UNIVERSIDAD\UTP\SEMESTRES\2 AÑO\2 SEMESTRE\DS IV\Actividades\Laboratorios\Lab5\capasLab\Laboratorio5-DSIV\bin\Debug\capasLab.exe
+C:\Users\Usuario\OneDrive\UNIVERSIDAD\UTP\SEMESTRES\2 AÑO\2 SEMESTRE\DS IV\Actividades\Laboratorios\Lab5\capasLab\Laboratorio5-DSIV\bin\Debug\capasLab.pdb
+C:\Users\Usuario\OneDrive\UNIVERSIDAD\UTP\SEMESTRES\2 AÑO\2 SEMESTRE\DS IV\Actividades\Laboratorios\Lab5\capasLab\Laboratorio5-DSIV\obj\Debug\capasLab.csproj.AssemblyReference.cache
+C:\Users\Usuario\OneDrive\UNIVERSIDAD\UTP\SEMESTRES\2 AÑO\2 SEMESTRE\DS IV\Actividades\Laboratorios\Lab5\capasLab\Laboratorio5-DSIV\obj\Debug\capasLab.exe.config
+C:\Users\Usuario\OneDrive\UNIVERSIDAD\UTP\SEMESTRES\2 AÑO\2 SEMESTRE\DS IV\Actividades\Laboratorios\Lab5\capasLab\Laboratorio5-DSIV\obj\Debug\Laboratorio5_DSIV.FormReserva.resources
+C:\Users\Usuario\OneDrive\UNIVERSIDAD\UTP\SEMESTRES\2 AÑO\2 SEMESTRE\DS IV\Actividades\Laboratorios\Lab5\capasLab\Laboratorio5-DSIV\obj\Debug\Laboratorio5_DSIV.FormResumen.resources
+C:\Users\Usuario\OneDrive\UNIVERSIDAD\UTP\SEMESTRES\2 AÑO\2 SEMESTRE\DS IV\Actividades\Laboratorios\Lab5\capasLab\Laboratorio5-DSIV\obj\Debug\capasLab.Properties.Resources.resources
+C:\Users\Usuario\OneDrive\UNIVERSIDAD\UTP\SEMESTRES\2 AÑO\2 SEMESTRE\DS IV\Actividades\Laboratorios\Lab5\capasLab\Laboratorio5-DSIV\obj\Debug\capasLab.csproj.GenerateResource.cache
+C:\Users\Usuario\OneDrive\UNIVERSIDAD\UTP\SEMESTRES\2 AÑO\2 SEMESTRE\DS IV\Actividades\Laboratorios\Lab5\capasLab\Laboratorio5-DSIV\obj\Debug\capasLab.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\OneDrive\UNIVERSIDAD\UTP\SEMESTRES\2 AÑO\2 SEMESTRE\DS IV\Actividades\Laboratorios\Lab5\capasLab\Laboratorio5-DSIV\obj\Debug\capasLab.exe
+C:\Users\Usuario\OneDrive\UNIVERSIDAD\UTP\SEMESTRES\2 AÑO\2 SEMESTRE\DS IV\Actividades\Laboratorios\Lab5\capasLab\Laboratorio5-DSIV\obj\Debug\capasLab.pdb
