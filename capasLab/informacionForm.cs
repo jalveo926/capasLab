@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace capasLab
 {
-    public partial class Form1 : Form
+    public partial class informacionForm : Form
     {
-        public Form1()
+        
+        public informacionForm()
         {
             InitializeComponent();
+        }
+
+        private void pagarBtn_Click(object sender, EventArgs e)
+        {
+         
+            FacturaForm objFactura = new FacturaForm();
+            objFactura.Show();
+            this.Hide();
         }
     }
 }
