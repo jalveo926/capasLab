@@ -54,7 +54,6 @@ namespace capasLab
             subtotal = 0;
             total = 0;
 
-
             //Luego de actualizar los cupos, procedemos a calcular todo lo que se necesita
             DeterminarTipoEntrada();
             CalcularEstacionamientosDisp(); //Restamos lo que usamos en estacionamiento actualmente y lo pasado
@@ -95,54 +94,66 @@ namespace capasLab
 
         void DeterminarTipoEntrada()
         {
-
-            try
+            if (string.IsNullOrWhiteSpace(tipoEntrada))
             {
-                if (tipoEntrada == null)
-                {
-                    throw new ArgumentNullException();
-                }
-
-                switch (tipoEntrada)
-                {
-                    case "Platino": montoTipo += 150; RestarCuposEntrada(0); break;
-                    case "VIP": montoTipo += 100; RestarCuposEntrada(1); break;
-                    case "General": montoTipo += 50; RestarCuposEntrada(2); break;
-                    default: MostrarAlerta("Elija una opción válida", "Advertencia"); break;
-                }
-
-
-            }
-            catch (ArgumentNullException)
-            {
-                MostrarAlerta("Debe ingresar un tipo de entrada", "Advertencia");
-            }
-            catch (Exception)
-            {
-                MostrarAlerta("Ha ocurrido un error", "Error");
+                MostrarAlerta("Debe seleccionar un tipo de entrada", "Advertencia");
+                throw new InvalidOperationException("Tipo de entrada no válido.");
             }
 
+            switch (tipoEntrada)
+            {
+                case "Platino":
+                    montoTipo += 150;
+                    RestarCuposEntrada(0);
+                    break;
+
+                case "VIP":
+                    montoTipo += 100;
+                    RestarCuposEntrada(1);
+                    break;
+
+                case "General":
+                    montoTipo += 50;
+                    RestarCuposEntrada(2);
+                    break;
+
+                default:
+                    MostrarAlerta("Elija una opción válida", "Advertencia");
+                    throw new InvalidOperationException("Tipo de entrada desconocido.");
+            }
         }
+
 
         void RestarCuposEntrada(int indice)
         {
-            if (cantEntrada <= cuposEntrada[indice] && cantEntrada > 0)
-                cuposEntrada[indice] -= cantEntrada;
-            else if (cantEntrada > cuposEntrada[indice])
-                MostrarAlerta("Ya no quedan cupos para este tipo de entrada (" + tipos[indice] + ") , Disculpe las molestias", "Error");
-            // Si cantEntrada == 0, no hace nada
-        }
+            if (cantEntrada == 0)
+                return;
 
-        //Este sirve para cuando queremos restar una cantidad personalizada y no lo que insertó la persona en el momento,
-        //Por ejemplo para restar las cantidades anteriores
+            if (cantEntrada <= cuposEntrada[indice])
+            {
+                cuposEntrada[indice] -= cantEntrada;
+            }
+            else
+            {
+                MostrarAlerta($"No hay suficientes cupos para {tipos[indice]}.\n" +
+                              $"Disponibles: {cuposEntrada[indice]}", "Cupos agotados");
+
+                throw new InvalidOperationException("Cupos agotados para este tipo de entrada.");
+            }
+        }
 
         void RestarCuposEntrada(int indice, int cantRestar)
         {
-            if (cantRestar <= cuposEntrada[indice] && cantRestar > 0)
+            if (cantRestar <= 0) return;
+
+            if (cantRestar <= cuposEntrada[indice])
+            {
                 cuposEntrada[indice] -= cantRestar;
-            else if (cantRestar > cuposEntrada[indice])
-                MostrarAlerta("Ya no quedan cupos para este tipo de entrada (" + tipos[indice] + ") , Disculpe las molestias", "Error");
-            // Si cantRestar == 0, no hace nada
+            }
+            else
+            {
+                cuposEntrada[indice] = 0;
+            }
         }
 
         void MostrarAlerta(String mensaje, String titulo)

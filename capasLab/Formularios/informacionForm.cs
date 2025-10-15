@@ -18,14 +18,13 @@ namespace capasLab
             InitializeComponent();
         }
 
-        
+
 
         private void pagarBtn_Click(object sender, EventArgs e)
         {
             try
             {
                 var totales = ReservaCSV.LeerTotalesUsados();
-
                 var objEvento = new Evento(totales.usadosEst, totales.usadosPlatino, totales.usadosVIP, totales.usadosGeneral);
 
                 objEvento.ProcesarDatos(tipoEntCbx.Text, (int)cantBoletosNd.Value, (int)cantEstacionNd.Value);
@@ -40,17 +39,11 @@ namespace capasLab
                 nueva.TipoGeneral = 0;
 
                 if (tipoEntCbx.Text == "Platino")
-                {
                     nueva.TipoPlatino = (int)cantBoletosNd.Value;
-                }
                 else if (tipoEntCbx.Text == "VIP")
-                {
                     nueva.TipoVIP = (int)cantBoletosNd.Value;
-                }
                 else if (tipoEntCbx.Text == "General")
-                {
                     nueva.TipoGeneral = (int)cantBoletosNd.Value;
-                }
 
                 ReservaCSV.Guardar(nueva);
 
@@ -58,13 +51,18 @@ namespace capasLab
                 objFactura.Show();
                 this.Hide();
             }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message, "Cupos insuficientes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             catch (Exception ex)
             {
                 MessageBox.Show("Ocurrió un error al procesar la compra:\n" + ex.Message,
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
+
+
 
         private void informacionForm_Load(object sender, EventArgs e)
         {
