@@ -137,7 +137,7 @@
             this.groupBox1.Controls.Add(this.subtotalLbl);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(62, 51);
+            this.groupBox1.Location = new System.Drawing.Point(72, 31);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(340, 467);
             this.groupBox1.TabIndex = 9;
@@ -152,7 +152,7 @@
             this.ClientSize = new System.Drawing.Size(489, 530);
             this.Controls.Add(this.groupBox1);
             this.Name = "FacturaForm";
-            this.Text = "FacturaForm";
+            this.Text = "Factura - Alveo,Quintero, Benjamín";
             this.Load += new System.EventHandler(this.FacturaForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
