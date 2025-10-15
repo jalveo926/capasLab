@@ -37,6 +37,7 @@ namespace capasLab
         {
             cantEstacionNd.Hide();
             estacionamientoLbl.Hide();
+            errorProvider1.BlinkStyle = ErrorBlinkStyle.NeverBlink;
         }
 
         private void estCheck_CheckedChanged(object sender, EventArgs e)
@@ -52,6 +53,15 @@ namespace capasLab
                 estacionamientoLbl.Hide();
                 cantEstacionNd.Value = 0;
             }
+        }
+
+        private void tipoEntCbx_Validating(object sender, CancelEventArgs e)
+        {
+            if (tipoEntCbx.SelectedItem == null) { 
+                errorProvider1.SetError(tipoEntCbx, "Debe seleccionar un tipo de entrada");
+                e.Cancel = true;
+            }else errorProvider1.SetError(tipoEntCbx, string.Empty);
+
         }
     }
 }

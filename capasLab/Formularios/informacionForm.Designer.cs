@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tipoEntCbx = new System.Windows.Forms.ComboBox();
             this.cantBoletosNd = new System.Windows.Forms.NumericUpDown();
             this.cantEstacionNd = new System.Windows.Forms.NumericUpDown();
@@ -38,9 +39,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.estCheck = new System.Windows.Forms.CheckBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.cantBoletosNd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cantEstacionNd)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tipoEntCbx
@@ -55,6 +58,7 @@
             this.tipoEntCbx.Name = "tipoEntCbx";
             this.tipoEntCbx.Size = new System.Drawing.Size(120, 28);
             this.tipoEntCbx.TabIndex = 0;
+            this.tipoEntCbx.Validating += new System.ComponentModel.CancelEventHandler(this.tipoEntCbx_Validating);
             // 
             // cantBoletosNd
             // 
@@ -169,6 +173,10 @@
             this.estCheck.UseVisualStyleBackColor = true;
             this.estCheck.CheckedChanged += new System.EventHandler(this.estCheck_CheckedChanged);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // informacionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -185,6 +193,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cantEstacionNd)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,6 +211,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox estCheck;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 
