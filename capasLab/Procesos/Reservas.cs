@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 
 namespace capasLab
 {
-    internal class Reservas
+    public class Reservas
     {
         public DateTime Fecha { get; set; }
         public int CantidadEntradas { get; set; }

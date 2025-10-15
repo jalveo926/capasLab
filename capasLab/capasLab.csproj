@@ -59,6 +59,8 @@
       <DependentUpon>informacionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Procesos\Evento.cs" />
+    <Compile Include="Procesos\ReservaCSV.cs" />
+    <Compile Include="Procesos\Reservas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\FacturaForm.resx">

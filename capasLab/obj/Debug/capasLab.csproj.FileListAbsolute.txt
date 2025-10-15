@@ -10,3 +10,15 @@ C:\Users\Usuario\OneDrive\UNIVERSIDAD\UTP\SEMESTRES\2 AÑO\2 SEMESTRE\DS IV\Acti
 C:\Users\Usuario\OneDrive\UNIVERSIDAD\UTP\SEMESTRES\2 AÑO\2 SEMESTRE\DS IV\Actividades\Laboratorios\Lab5\capasLab\capasLab\obj\Debug\capasLab.exe.config
 C:\Users\Usuario\OneDrive\UNIVERSIDAD\UTP\SEMESTRES\2 AÑO\2 SEMESTRE\DS IV\Actividades\Laboratorios\Lab5\capasLab\capasLab\obj\Debug\capasLab.informacionForm.resources
 C:\Users\Usuario\OneDrive\UNIVERSIDAD\UTP\SEMESTRES\2 AÑO\2 SEMESTRE\DS IV\Actividades\Laboratorios\Lab5\capasLab\capasLab\obj\Debug\capasLab.FacturaForm.resources
+C:\Users\Sale\OneDrive\Escritorio\UTP\III SEMESTRE\Desarrollo de Software III\SEMESTRAL\GITHUB\capasLab\capasLab\obj\Debug\capasLab.csproj.AssemblyReference.cache
+C:\Users\Sale\OneDrive\Escritorio\UTP\III SEMESTRE\Desarrollo de Software III\SEMESTRAL\GITHUB\capasLab\capasLab\obj\Debug\capasLab.exe.config
+C:\Users\Sale\OneDrive\Escritorio\UTP\III SEMESTRE\Desarrollo de Software III\SEMESTRAL\GITHUB\capasLab\capasLab\obj\Debug\capasLab.FacturaForm.resources
+C:\Users\Sale\OneDrive\Escritorio\UTP\III SEMESTRE\Desarrollo de Software III\SEMESTRAL\GITHUB\capasLab\capasLab\obj\Debug\capasLab.informacionForm.resources
+C:\Users\Sale\OneDrive\Escritorio\UTP\III SEMESTRE\Desarrollo de Software III\SEMESTRAL\GITHUB\capasLab\capasLab\obj\Debug\capasLab.Properties.Resources.resources
+C:\Users\Sale\OneDrive\Escritorio\UTP\III SEMESTRE\Desarrollo de Software III\SEMESTRAL\GITHUB\capasLab\capasLab\obj\Debug\capasLab.csproj.GenerateResource.cache
+C:\Users\Sale\OneDrive\Escritorio\UTP\III SEMESTRE\Desarrollo de Software III\SEMESTRAL\GITHUB\capasLab\capasLab\obj\Debug\capasLab.csproj.CoreCompileInputs.cache
+C:\Users\Sale\OneDrive\Escritorio\UTP\III SEMESTRE\Desarrollo de Software III\SEMESTRAL\GITHUB\capasLab\capasLab\obj\Debug\capasLab.exe
+C:\Users\Sale\OneDrive\Escritorio\UTP\III SEMESTRE\Desarrollo de Software III\SEMESTRAL\GITHUB\capasLab\capasLab\obj\Debug\capasLab.pdb
+C:\Users\Sale\OneDrive\Escritorio\UTP\III SEMESTRE\Desarrollo de Software III\SEMESTRAL\GITHUB\capasLab\capasLab\bin\Debug\capasLab.exe.config
+C:\Users\Sale\OneDrive\Escritorio\UTP\III SEMESTRE\Desarrollo de Software III\SEMESTRAL\GITHUB\capasLab\capasLab\bin\Debug\capasLab.exe
+C:\Users\Sale\OneDrive\Escritorio\UTP\III SEMESTRE\Desarrollo de Software III\SEMESTRAL\GITHUB\capasLab\capasLab\bin\Debug\capasLab.pdb

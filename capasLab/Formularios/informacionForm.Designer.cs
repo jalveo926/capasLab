@@ -33,10 +33,10 @@
             this.cantEstacionNd = new System.Windows.Forms.NumericUpDown();
             this.pagarBtn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.cantBoletosNd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cantEstacionNd)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -85,19 +85,9 @@
             0,
             0,
             0});
-            this.cantEstacionNd.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.cantEstacionNd.Name = "cantEstacionNd";
             this.cantEstacionNd.Size = new System.Drawing.Size(39, 26);
             this.cantEstacionNd.TabIndex = 2;
-            this.cantEstacionNd.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // pagarBtn
             // 
@@ -128,25 +118,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingrese la información solicitada";
             // 
-            // label1
+            // label4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(168, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 39);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "BLOCKBUSTER";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(194, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Elija su tipo de entrada";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(23, 179);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(312, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Elija la cantidad de estacionamientos ";
             // 
             // label3
             // 
@@ -157,14 +136,25 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Elija la cantidad de boletos";
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 179);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(312, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Elija la cantidad de estacionamientos ";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(194, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Elija su tipo de entrada";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(168, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(285, 39);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "BLOCKBUSTER";
             // 
             // informacionForm
             // 

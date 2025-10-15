@@ -4,10 +4,12 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms; 
+
 
 namespace capasLab
 {
-    internal class ReservaCSV
+    public class ReservaCSV
     {
         private static readonly string Carpeta = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
@@ -49,6 +51,41 @@ namespace capasLab
                 throw new IOException("Error al guardar el archivo CSV: " + ex.Message, ex);
             }
         }
+
+        public static (int usadosEst, int usadosPlatino, int usadosVIP, int usadosGeneral) LeerTotalesUsados()
+        {
+            int usadosEst = 0, usadosPlatino = 0, usadosVIP = 0, usadosGeneral = 0;
+
+            try
+            {
+                if (!File.Exists(Archivo))
+                    return (0, 0, 0, 0);
+
+                using (var sr = new StreamReader(Archivo))
+                {
+                    string linea;
+                    bool primera = true;
+                    while ((linea = sr.ReadLine()) != null)
+                    {
+                        if (primera) { primera = false; continue; }
+                        var datos = linea.Split(',');
+                        usadosPlatino += int.Parse(datos[2]);
+                        usadosVIP += int.Parse(datos[3]);
+                        usadosGeneral += int.Parse(datos[4]);
+                        usadosEst += int.Parse(datos[5]);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al leer registros previos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return (usadosEst, usadosPlatino, usadosVIP, usadosGeneral);
+        }
+
+
+
         private static string Csv(string valor)
         {
             if (valor is null)
