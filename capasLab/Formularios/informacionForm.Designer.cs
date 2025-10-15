@@ -33,10 +33,11 @@
             this.cantEstacionNd = new System.Windows.Forms.NumericUpDown();
             this.pagarBtn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.estacionamientoLbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.estCheck = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.cantBoletosNd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cantEstacionNd)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -79,30 +80,20 @@
             // 
             // cantEstacionNd
             // 
-            this.cantEstacionNd.Location = new System.Drawing.Point(27, 211);
+            this.cantEstacionNd.Location = new System.Drawing.Point(27, 285);
             this.cantEstacionNd.Maximum = new decimal(new int[] {
             2,
-            0,
-            0,
-            0});
-            this.cantEstacionNd.Minimum = new decimal(new int[] {
-            1,
             0,
             0,
             0});
             this.cantEstacionNd.Name = "cantEstacionNd";
             this.cantEstacionNd.Size = new System.Drawing.Size(39, 26);
             this.cantEstacionNd.TabIndex = 2;
-            this.cantEstacionNd.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // pagarBtn
             // 
             this.pagarBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pagarBtn.Location = new System.Drawing.Point(115, 264);
+            this.pagarBtn.Location = new System.Drawing.Point(115, 338);
             this.pagarBtn.Name = "pagarBtn";
             this.pagarBtn.Size = new System.Drawing.Size(102, 38);
             this.pagarBtn.TabIndex = 3;
@@ -112,7 +103,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.estCheck);
+            this.groupBox1.Controls.Add(this.estacionamientoLbl);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.pagarBtn);
             this.groupBox1.Controls.Add(this.label2);
@@ -123,10 +115,37 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox1.Location = new System.Drawing.Point(127, 91);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(340, 319);
+            this.groupBox1.Size = new System.Drawing.Size(340, 392);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingrese la información solicitada";
+            // 
+            // estacionamientoLbl
+            // 
+            this.estacionamientoLbl.AutoSize = true;
+            this.estacionamientoLbl.Location = new System.Drawing.Point(22, 247);
+            this.estacionamientoLbl.Name = "estacionamientoLbl";
+            this.estacionamientoLbl.Size = new System.Drawing.Size(312, 20);
+            this.estacionamientoLbl.TabIndex = 8;
+            this.estacionamientoLbl.Text = "Elija la cantidad de estacionamientos ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(23, 114);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(225, 20);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Elija la cantidad de boletos";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(194, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Elija su tipo de entrada";
             // 
             // label1
             // 
@@ -139,32 +158,16 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "BLOCKBUSTER";
             // 
-            // label2
+            // estCheck
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(194, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Elija su tipo de entrada";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 114);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(225, 20);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Elija la cantidad de boletos";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 179);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(312, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Elija la cantidad de estacionamientos ";
+            this.estCheck.AutoSize = true;
+            this.estCheck.Location = new System.Drawing.Point(26, 204);
+            this.estCheck.Name = "estCheck";
+            this.estCheck.Size = new System.Drawing.Size(264, 24);
+            this.estCheck.TabIndex = 9;
+            this.estCheck.Text = "¿Necesita estacionamientos?";
+            this.estCheck.UseVisualStyleBackColor = true;
+            this.estCheck.CheckedChanged += new System.EventHandler(this.estCheck_CheckedChanged);
             // 
             // informacionForm
             // 
@@ -177,6 +180,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "informacionForm";
             this.Text = "Información - Alveo, Irvin, Quintero";
+            this.Load += new System.EventHandler(this.informacionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cantBoletosNd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cantEstacionNd)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -193,10 +197,11 @@
         private System.Windows.Forms.NumericUpDown cantEstacionNd;
         private System.Windows.Forms.Button pagarBtn;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label estacionamientoLbl;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox estCheck;
     }
 }
 

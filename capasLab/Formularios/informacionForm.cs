@@ -18,6 +18,8 @@ namespace capasLab
             InitializeComponent();
         }
 
+        
+
         private void pagarBtn_Click(object sender, EventArgs e)
         {   
             //Aquí hay que poner los datos del csv
@@ -29,6 +31,27 @@ namespace capasLab
             objFactura.Show();
             this.Hide();
 
+        }
+
+        private void informacionForm_Load(object sender, EventArgs e)
+        {
+            cantEstacionNd.Hide();
+            estacionamientoLbl.Hide();
+        }
+
+        private void estCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (estCheck.Checked)
+            {
+                cantEstacionNd.Show();
+                estacionamientoLbl.Show();
+            }
+            else
+            {
+                cantEstacionNd.Hide();
+                estacionamientoLbl.Hide();
+                cantEstacionNd.Value = 0;
+            }
         }
     }
 }
