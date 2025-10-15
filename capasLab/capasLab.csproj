@@ -58,6 +58,8 @@
     <Compile Include="Formularios\informacionForm.Designer.cs">
       <DependentUpon>informacionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\ReservaCSV.cs" />
+    <Compile Include="Procesos\Reserva.cs" />
     <Compile Include="Procesos\Evento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
