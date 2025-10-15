@@ -19,11 +19,16 @@ namespace capasLab
         }
 
         private void pagarBtn_Click(object sender, EventArgs e)
-        {
-         
-            FacturaForm objFactura = new FacturaForm();
+        {   
+            //Aquí hay que poner los datos del csv
+            var objEvento = new Evento(0, 0, 0, 0);
+
+            objEvento.ProcesarDatos(tipoEntCbx.Text, int.Parse(cantBoletosNd.Text), int.Parse(cantEstacionNd.Text));
+
+            FacturaForm objFactura = new FacturaForm(objEvento);
             objFactura.Show();
             this.Hide();
+
         }
     }
 }

@@ -9,9 +9,9 @@ namespace capasLab
 {
     public class Evento
     {
-        String tipoEntrada;
-        private int cantEntrada { get; set; }
-        private int cantEstacionamiento { get; set; }
+        public String tipoEntrada;
+        public int cantEntrada { get; set; }
+        public int cantEstacionamiento { get; set; }
         //Sirve para restar al inicio del programa lo que se ha usado antes
         int[] cuposEntrada = { 10, 20, 120 }; //Platino,VIP,General respectivamente
         string[] tipos = { "Platino", "VIP", "General" };

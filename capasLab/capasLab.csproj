@@ -61,6 +61,9 @@
     <Compile Include="Procesos\Evento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FacturaForm.resx">
+      <DependentUpon>FacturaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="informacionForm.resx">
       <DependentUpon>informacionForm.cs</DependentUpon>
     </EmbeddedResource>
