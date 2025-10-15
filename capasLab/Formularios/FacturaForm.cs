@@ -11,6 +11,7 @@ using System.Globalization;
 
 namespace capasLab
 {
+    //Por Jesús Alveo, Roniel Quintero,Benjamín Irvin 
     public partial class FacturaForm : Form
     {   
         Evento objEvento;
